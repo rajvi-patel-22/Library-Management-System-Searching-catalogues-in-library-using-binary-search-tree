@@ -77,7 +77,7 @@ public class library_management
 
 	Node root;
 		private static Scanner input;
-	finaldsa() 
+	library_management() 
 	{
 	root = null;  
 	} 
@@ -241,7 +241,7 @@ public class library_management
 	{ 
 		
 		input = new Scanner(System.in);
-		finaldsa tree = new finaldsa();
+		library_management tree = new library_management();
 		HashMap<String, Integer> hashmapping = new HashMap<>();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss"); 
 		Calendar cal = Calendar.getInstance();
