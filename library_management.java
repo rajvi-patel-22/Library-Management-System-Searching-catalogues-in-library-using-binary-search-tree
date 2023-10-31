@@ -264,13 +264,22 @@ public class library_management
 		
 		FileWriter fr3 = new FileWriter("append.txt", true);
 		BufferedWriter br3 = new BufferedWriter(fr3);
-		
+
+		FileWriter fr4 = new FileWriter("x.txt", true);
+		BufferedWriter br4 = new BufferedWriter(fr4);
+
 		FileReader file = new FileReader("x.txt");			
-		BufferedReader reader = new BufferedReader(file);	
-		
+		BufferedReader reader = new BufferedReader(file);
+
+		FileWriter fr5 = new FileWriter("y.txt", true);
+		BufferedWriter br5 = new BufferedWriter(fr5);
+
 		FileReader file2= new FileReader("y.txt");			
-		BufferedReader reader2 = new BufferedReader(file2);	
-		
+		BufferedReader reader2 = new BufferedReader(file2);
+
+		FileWriter fr6 = new FileWriter("y.txt", true);
+		BufferedWriter br6 = new BufferedWriter(fr5);
+
 		FileReader file3= new FileReader("z.txt");			
 		BufferedReader reader3 = new BufferedReader(file3);	
 		
@@ -365,6 +374,7 @@ public class library_management
 									
 							    	System.out.println("\nEnter name of book:");
 									String name = input.next();
+									br4.write(name +"\n");
 									boolean z1=tree.containsNode(name);
 									
 									if(z1==true)
@@ -378,7 +388,9 @@ public class library_management
 										br1.write(name);
 										br2.write(quantity);
 										br3.write(quantity);
-										
+										br4.write(quantity + "\n");
+										br5.write(quantity + "\n");
+
 										tree.insert(name);
 										hashmapping.put(name, i);
 										hashmapping.get(name);
@@ -612,6 +624,9 @@ public class library_management
 		fr2.close();
 		br3.close();
 		fr3.close();
+		br4.close();
+		br5.close();
+		br6.close();
 		reader.close();
 		reader2.close();
 		reader3.close();
